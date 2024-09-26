@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-24T13:00:50" hostname="ANTHONEE" time="0.04">
+<testsuite name="tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-26T13:43:14" hostname="anthonees-air.dhcp.bsu.edu" time="0.048">
   <properties/>
-  <testcase name="testFirstAuthor()" classname="tests" time="0.04"/>
+  <testcase name="testFirstAuthor()" classname="tests" time="0.048"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation

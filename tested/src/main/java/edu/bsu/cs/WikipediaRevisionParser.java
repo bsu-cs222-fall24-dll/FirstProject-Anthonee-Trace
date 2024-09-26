@@ -6,7 +6,7 @@ import net.minidev.json.JSONArray;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
+
 
 public class WikipediaRevisionParser {
     public String parse(InputStream testDataStream) throws IOException {

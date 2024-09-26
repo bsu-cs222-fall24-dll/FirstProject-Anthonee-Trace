@@ -27,13 +27,13 @@ public class WikipediaRevisionReader {
 
     public String getLatestRevisionOf(String articleTitle) throws IOException {
         // Encode only the article title, not the entire URL
-        String encodedArticleTitle = URLEncoder.encode(articleTitle, StandardCharsets.UTF_8.toString());
+        String encodedArticleTitle = URLEncoder.encode(articleTitle, StandardCharsets.UTF_8);
 
         // Correctly format the URL with the encoded article title
         String urlString = String.format("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=%s&formatversion=2&rvprop=timestamp%%7Cuser&rvlimit=15", encodedArticleTitle);
         try {
             // Create a URL object from the string
-            URL url = new URL(urlString);
+            @SuppressWarnings("deprecation") URL url = new URL(urlString);
 
             // Open a connection to the URL
             URLConnection connection = url.openConnection();
@@ -43,7 +43,8 @@ public class WikipediaRevisionReader {
             // Get input stream from the connection
             InputStream inputStream = connection.getInputStream();
             WikipediaRevisionParser parser = new WikipediaRevisionParser();
-            String user = parser.parse(inputStream);
+            String user;
+            user = parser.parse(inputStream);
             return user;
         } catch (MalformedURLException malformedURLException) {
             throw new RuntimeException(malformedURLException);
