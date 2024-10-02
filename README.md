@@ -20,7 +20,7 @@ To build and run the project, follow these steps:
 1. Ensure you have Gradle installed on your system for dependency management and building the project.
 2. Make sure you have an active internet connection to fetch data from the Wikipedia API.
 3. Clone the repository or download the project files.
-4. When in the project, Click the GEAR icon right to minimize and X buttons.
+4. When in the project, Click the GEAR icon on the left side of the minimize and X buttons.
 5. Click on Run Anything.
 6. Run the following command to build the project:
         ./gradlew build
