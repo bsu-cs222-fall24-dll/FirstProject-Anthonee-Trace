@@ -10,6 +10,6 @@ import java.io.InputStream;
 public class WikipediaRevisionParser {
     public String parse(InputStream testDataStream) throws IOException {
         JSONArray result= (JSONArray) JsonPath.read(testDataStream,"$..user");
-        return result.get(0).toString();
+        return result.getFirst().toString();
     }
 }
